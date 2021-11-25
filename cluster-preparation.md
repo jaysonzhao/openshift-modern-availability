@@ -28,7 +28,7 @@ Prepare some variables
 ```shell
 export ssh_key=$(cat ~/.ssh/ocp_rsa | sed 's/^/  /')
 export ssh_pub_key=$(cat ~/.ssh/ocp_rsa.pub)
-export pull_secret=$(cat ~/git/openshift-enablement-exam/4.0/pullsecret.json)
+export pull_secret=$(cat ~/pullsecret.json)
 export base_domain=$(oc get dns cluster -o jsonpath='{.spec.baseDomain}')
 export base_domain=${base_domain#*.}
 export cluster_release_image=quay.io/openshift-release-dev/ocp-release:$(oc get clusteroperator config-operator -o jsonpath='{.status.versions[0].version}')-x86_64
