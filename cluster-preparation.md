@@ -51,7 +51,7 @@ create clusters
 ```shell
 case ${infrastructure} in
   aws)
-    export region="us-east-1"
+    export region="ap-northeast-3"
   ;;
   gcp)
     export region="us-east4"
@@ -68,7 +68,7 @@ helm upgrade cluster1 ./charts/acm-cluster --atomic --create-namespace -i -n clu
 
 case ${infrastructure} in
   aws)
-    export region="us-east-2"
+    export region="ap-northeast-2"
   ;;
   gcp)
     export region="us-central1"
