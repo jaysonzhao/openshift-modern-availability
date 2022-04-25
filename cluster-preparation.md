@@ -189,8 +189,8 @@ done
 export infrastructure_id1=$(oc --context cluster1 get infrastructure cluster -o jsonpath='{.status.infrastructureName}')
 export infrastructure_id2=$(oc --context cluster2 get infrastructure cluster -o jsonpath='{.status.infrastructureName}')
 export infrastructure_id3=$(oc --context cluster3 get infrastructure cluster -o jsonpath='{.status.infrastructureName}')
-export region1="us-east-1"
-export region2="us-east-2"
+export region1="ap-northeast-3"
+export region2="ap-northeast-2"
 export region3="us-west-2"
 export vpc_id1=$(aws --region ${region1} ec2 describe-vpcs  --filter Name=tag:Name,Values=${infrastructure_id1}-vpc | jq -r .Vpcs[0].VpcId)
 export vpc_id2=$(aws --region ${region2} ec2 describe-vpcs  --filter Name=tag:Name,Values=${infrastructure_id2}-vpc | jq -r .Vpcs[0].VpcId)
